@@ -1,0 +1,5 @@
+{
+  "name": "McKiosk Clone",
+  "description": "A professional, responsive kiosk application cloning the McDonald's self-ordering interface with category sliders, meal builders, and cart management.",
+  "requestFramePermissions": []
+}

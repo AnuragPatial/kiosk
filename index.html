@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiosk App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar hiding for sleek look */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+      
+      /* Sidebar container - prevent collision with footer */
+      /* Header: 60px, Footer: 48px (h-12) */
+      .sidebar-container {
+        height: calc(100vh - 60px - 48px);
+        max-height: calc(100vh - 60px - 48px);
+        overflow: hidden;
+      }
+      
+      /* Header: 68px, Footer: 56px (sm:h-14) */
+      @media (min-width: 640px) {
+        .sidebar-container {
+          height: calc(100vh - 68px - 56px);
+          max-height: calc(100vh - 68px - 56px);
+        }
+      }
+      
+      /* Header: 76px, Footer: 64px (md:h-16) */
+      @media (min-width: 768px) {
+        .sidebar-container {
+          height: calc(100vh - 76px - 64px);
+          max-height: calc(100vh - 76px - 64px);
+        }
+      }
+      
+      /* Header: 84px, Footer: 72px (lg:h-18 = 4.5rem) */
+      @media (min-width: 1024px) {
+        .sidebar-container {
+          height: calc(100vh - 84px - 72px);
+          max-height: calc(100vh - 84px - 72px);
+        }
+      }
+      
+      /* Header: 88px, Footer: 72px (xl uses lg footer height) */
+      @media (min-width: 1280px) {
+        .sidebar-container {
+          height: calc(100vh - 88px - 72px);
+          max-height: calc(100vh - 88px - 72px);
+        }
+      }
+      
+      /* Product grid responsive - minimum 6 items on large screens */
+      @media (min-width: 1024px) {
+        .product-grid-container {
+          min-height: calc(100vh - 250px);
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
