@@ -32,9 +32,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
           {product.name}
         </h3>
         
-        {/* Price Tag - Responsive */}
-        <div className="mt-auto pt-0.5 sm:pt-1 flex-shrink-0">
-             <span className="font-black text-[9px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base text-gray-900 bg-yellow-50 px-1.5 sm:px-2 md:px-2.5 lg:px-3 py-0.5 sm:py-1 rounded-full border border-yellow-200">₱{product.price.toFixed(0)}</span>
+        {/* Price Tag - Responsive with visible currency */}
+        <div className="mt-auto pt-0.5 sm:pt-1 pb-1 sm:pb-1.5 md:pb-2 flex-shrink-0">
+             <span className="font-black text-[9px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base text-gray-900 bg-yellow-50 px-1.5 sm:px-2 md:px-2.5 lg:px-3 py-0.5 sm:py-1 rounded-full border border-yellow-200 whitespace-nowrap">
+               <span className="text-[#b00e16]">$</span>{product.price.toFixed(0)}
+             </span>
         </div>
       </div>
     </div>

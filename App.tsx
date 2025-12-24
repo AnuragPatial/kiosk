@@ -180,7 +180,7 @@ const App: React.FC = () => {
         {/* Product Grid Area (Right) - Fully Responsive */}
         <div 
           ref={productGridRef}
-          className="flex-1 overflow-y-auto bg-[#f8f9fa] p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 pb-16 sm:pb-20 md:pb-24"
+          className="flex-1 overflow-y-auto bg-[#f8f9fa] p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 pb-20 sm:pb-24 md:pb-28 lg:pb-32 xl:pb-32"
         >
            {/* Responsive width constraint */}
            <div className="max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto w-full px-1 sm:px-2">
@@ -208,7 +208,7 @@ const App: React.FC = () => {
       </div>
 
       {/* Responsive Footer */}
-      <div className="fixed bottom-0 left-0 w-full z-40 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] h-12 sm:h-14 md:h-16 lg:h-18 flex items-center px-2 sm:px-3 md:px-4 lg:px-6 gap-2 sm:gap-3">
+      <div className="fixed bottom-0 left-0 w-full z-40 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] h-12 sm:h-14 md:h-16 lg:h-[72px] xl:h-[72px] flex items-center px-2 sm:px-3 md:px-4 lg:px-6 gap-2 sm:gap-3">
         
         {/* Left: Label & Cart - Responsive */}
         <div className="flex-1 flex items-center gap-2 sm:gap-3 overflow-hidden h-full py-1 sm:py-1.5">

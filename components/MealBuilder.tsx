@@ -46,7 +46,7 @@ const MealBuilder: React.FC<MealBuilderProps> = ({ product, onCancel, onConfirm 
             <div className="text-center z-10 px-2">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 mb-1 sm:mb-2">{product.name}</h2>
                 <div className="inline-block bg-black text-[#ffbc0d] px-3 sm:px-4 py-0.5 sm:py-1 rounded-full text-sm sm:text-base md:text-lg font-bold mb-2 sm:mb-4">
-                    ₱ {product.price.toFixed(2)}
+                    $ {product.price.toFixed(2)}
                 </div>
                 <p className="text-gray-500 text-xs sm:text-sm max-w-xs mx-auto hidden sm:block">
                     Delicious perfection. Customize your sides and drinks to complete your meal.
@@ -117,7 +117,7 @@ const MealBuilder: React.FC<MealBuilderProps> = ({ product, onCancel, onConfirm 
                       </div>
                       <div className="text-center w-full mt-1 sm:mt-2">
                           <span className="block text-[10px] sm:text-xs font-bold text-gray-800 truncate w-full">{drink.name}</span>
-                          <span className="block text-[9px] sm:text-[10px] text-gray-400 font-medium">+₱ {drink.priceDelta}</span>
+                          <span className="block text-[9px] sm:text-[10px] text-gray-400 font-medium">+$ {drink.priceDelta}</span>
                       </div>
                     </button>
                   ))}
@@ -139,7 +139,7 @@ const MealBuilder: React.FC<MealBuilderProps> = ({ product, onCancel, onConfirm 
                    : 'bg-gray-300 cursor-not-allowed'
                }`}
              >
-               {selectedDrink ? `Add to Order - ₱ ${(product.price + selectedDrink.priceDelta).toFixed(2)}` : 'Select a Drink'}
+               {selectedDrink ? `Add to Order - $ ${(product.price + selectedDrink.priceDelta).toFixed(2)}` : 'Select a Drink'}
              </button>
           </div>
        </div>

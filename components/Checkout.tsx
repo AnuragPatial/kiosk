@@ -70,10 +70,10 @@ const Checkout: React.FC<CheckoutProps> = ({ cart, onBackToMenu, onCompletePayme
                       <div className="flex-1 min-w-0">
                         <p className="font-bold text-gray-900 text-sm sm:text-base md:text-lg truncate">{item.product.name}</p>
                         {item.drink && (
-                          <p className="text-xs sm:text-sm text-gray-500 mt-0.5">with {item.drink.name} (+₱{item.drink.priceDelta.toFixed(2)})</p>
+                          <p className="text-xs sm:text-sm text-gray-500 mt-0.5">with {item.drink.name} (+${item.drink.priceDelta.toFixed(2)})</p>
                         )}
                       </div>
-                      <span className="font-bold text-gray-800 text-sm sm:text-base md:text-lg whitespace-nowrap">₱{(item.product.price + (item.drink?.priceDelta || 0)).toFixed(2)}</span>
+                      <span className="font-bold text-gray-800 text-sm sm:text-base md:text-lg whitespace-nowrap">${(item.product.price + (item.drink?.priceDelta || 0)).toFixed(2)}</span>
                     </div>
                   ))}
                 </div>
@@ -82,15 +82,15 @@ const Checkout: React.FC<CheckoutProps> = ({ cart, onBackToMenu, onCompletePayme
                 <div className="border-t border-gray-200 pt-4 sm:pt-6 space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Subtotal:</span>
-                    <span className="font-medium text-gray-900">₱{subtotal.toFixed(2)}</span>
+                    <span className="font-medium text-gray-900">${subtotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Tax (8%):</span>
-                    <span className="font-medium text-gray-900">₱{tax.toFixed(2)}</span>
+                    <span className="font-medium text-gray-900">${tax.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-lg sm:text-xl md:text-2xl font-black text-gray-900 border-t border-gray-300 pt-3 sm:pt-4 mt-2 sm:mt-3">
                     <span>Total:</span>
-                    <span className="text-[#b00e16]">₱{total.toFixed(2)}</span>
+                    <span className="text-[#b00e16]">${total.toFixed(2)}</span>
                   </div>
                 </div>
 
@@ -161,7 +161,7 @@ const Checkout: React.FC<CheckoutProps> = ({ cart, onBackToMenu, onCompletePayme
                   Processing...
                 </span>
               ) : (
-                `Pay ₱${total.toFixed(2)}`
+                `Pay $${total.toFixed(2)}`
               )}
             </button>
           </div>
